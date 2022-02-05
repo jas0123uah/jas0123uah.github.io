@@ -372,35 +372,39 @@ function arlo_tm_down(){
 // ---------------    IMAGE TO SVG    ------------------
 // -----------------------------------------------------
 
-// function arlo_tm_imgtosvg(){
+function arlo_tm_imgtosvg(){
 	
-// 	"use strict";
+	"use strict";
 	
-// 	jQuery('img.svg').each(function(){
+	jQuery('img.svg').each(function(){
 		
-// 		var jQueryimg 		= jQuery(this);
-// 		var imgClass		= jQueryimg.attr('class');
-// 		var imgURL			= jQueryimg.attr('src');
+		var jQueryimg 		= jQuery(this);
+		var imgClass		= jQueryimg.attr('class');
+		var imgURL			= jQueryimg.attr('src');
 
-// 		jQuery.get(imgURL, function(data) {
-// 			// Get the SVG tag, ignore the rest
-// 			var jQuerysvg = jQuery(data).find('svg');
+		if (imgURL == "img/svg/python.svg" || imgURL == "img/svg/javascript.svg" || imgURL == "img/svg/heroku.svg" ||imgURL == "img/svg/html5.svg" ||imgURL == "img/svg/css3.svg" ||imgURL == "img/svg/react.svg" ||imgURL == "img/svg/redux.svg" ||imgURL == "img/svg/ex.svg" ||imgURL == "img/svg/flask.svg" ||imgURL == "img/svg/sequelize.svg" ||imgURL == "img/svg/sqlA.svg" ||imgURL == "img/svg/selenium.svg" ||imgURL == "img/svg/git.svg" ||imgURL == "img/svg/social/github.svg" ||imgURL == "img/svg/social/linkedin.svg" ||imgURL == "img/svg/social/angellist.svg" ) {
+			return
+		}
 
-// 			// Add replaced image's classes to the new SVG
-// 			if(typeof imgClass !== 'undefined') {
-// 				jQuerysvg = jQuerysvg.attr('class', imgClass+' replaced-svg');
-// 			}
+		jQuery.get(imgURL, function(data) {
+			// Get the SVG tag, ignore the rest
+			var jQuerysvg = jQuery(data).find('svg');
 
-// 			// Remove any invalid XML tags as per http://validator.w3.org
-// 			jQuerysvg = jQuerysvg.removeAttr('xmlns:a');
+			// Add replaced image's classes to the new SVG
+			if(typeof imgClass !== 'undefined') {
+				jQuerysvg = jQuerysvg.attr('class', imgClass+' replaced-svg');
+			}
 
-// 			// Replace image with new SVG
-// 			jQueryimg.replaceWith(jQuerysvg);
+			// Remove any invalid XML tags as per http://validator.w3.org
+			jQuerysvg = jQuerysvg.removeAttr('xmlns:a');
 
-// 		}, 'xml');
+			// Replace image with new SVG
+			jQueryimg.replaceWith(jQuerysvg);
 
-// 	});
-// }
+		}, 'xml');
+
+	});
+}
 
 // -----------------------------------------------------
 // ---------------   DATA IMAGES    --------------------
