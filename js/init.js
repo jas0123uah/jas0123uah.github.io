@@ -382,9 +382,9 @@ function arlo_tm_imgtosvg(){
 		var imgClass		= jQueryimg.attr('class');
 		var imgURL			= jQueryimg.attr('src');
 
-		if (imgURL == "img/svg/python.svg" || imgURL == "img/svg/javascript.svg" || imgURL == "img/svg/heroku.svg" ||imgURL == "img/svg/html5.svg" ||imgURL == "img/svg/css3.svg" ||imgURL == "img/svg/react.svg" ||imgURL == "img/svg/redux.svg" ||imgURL == "img/svg/ex.svg" ||imgURL == "img/svg/flask.svg" ||imgURL == "img/svg/sequelize.svg" ||imgURL == "img/svg/sqlA.svg" ||imgURL == "img/svg/selenium.svg" ||imgURL == "img/svg/git.svg" ||imgURL == "img/svg/social/github.svg" ||imgURL == "img/svg/social/linkedin.svg" ||imgURL == "img/svg/social/angellist.svg" ) {
-			continue
-		}
+		// if (imgURL == "img/svg/python.svg" || imgURL == "img/svg/javascript.svg" || imgURL == "img/svg/heroku.svg" ||imgURL == "img/svg/html5.svg" ||imgURL == "img/svg/css3.svg" ||imgURL == "img/svg/react.svg" ||imgURL == "img/svg/redux.svg" ||imgURL == "img/svg/ex.svg" ||imgURL == "img/svg/flask.svg" ||imgURL == "img/svg/sequelize.svg" ||imgURL == "img/svg/sqlA.svg" ||imgURL == "img/svg/selenium.svg" ||imgURL == "img/svg/git.svg" ||imgURL == "img/svg/social/github.svg" ||imgURL == "img/svg/social/linkedin.svg" ||imgURL == "img/svg/social/angellist.svg" ) {
+		// 	continue
+		// }
 
 		jQuery.get(imgURL, function(data) {
 			// Get the SVG tag, ignore the rest
